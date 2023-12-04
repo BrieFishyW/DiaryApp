@@ -1,0 +1,20 @@
+body {
+    background-color: #fffdeb;
+}
+label {
+    font-size: 12px;
+}
+#navbar {
+    padding: 10px 30px;
+    background-color: #deb357;
+    border-bottom: solid lightgray 1px;
+}
+.nav-item{
+    padding: 5px;
+}
+.orange {
+    background-color: #deb357;
+}
+h3 {
+    color: #deb357;
+}
