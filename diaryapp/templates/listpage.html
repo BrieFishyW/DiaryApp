@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Diary Entries
+{% endblock %}
+
+{% block body %}
+    <h1>Entries</h1>
+    <div id="searchbar">
+        <form action="" method="GET">
+            <input type="search" name="entry_title">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    {% for entry in entry_list %}
+        <div id="entryListItem" class="border rounded">
+            <div class="col-md-8">
+                <div class="float-start"><h3>{{ entry.entry_title }}</h3></div>
+                <div class="float-end"><h5>{{ entry.entry_date }}</h5></div><br>
+                <div class="float-start"><p class="description">{{ entry.entry_content|truncatewords:20 }}</p></div>
+            </div>
+        </div>
+    {% endfor %}
+
+    {% if entry_list.has_previous %}
+        <a href="?page=1">First</a>
+        <a href="?page={{ entry_list.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    <p>Page: {{ entry_list.number }} of {{ entry_list.paginator.num_pages }}</p>
+
+    {% if entry_list.has_next %}
+        <a href="?page={{ entry_list.next_page_number }}">Next</a>
+        <a href="?page={{ entry_list.paginator.num_pages }}">Last</a>
+    {% endif %}
+{% endblock %}

@@ -37,13 +37,13 @@
                     <form method="post" onsubmit="loginuser()"> {% csrf_token %}
                         <div class="p-4">
                             <div class="input-group mb-3">
-                                <span class="input-group-text orange">
+                                <span class="input-group-text deepColor">
                                     <i class="bi bi-person-circle text-white"></i>
                                 </span>
                                 {{ form.username }}
                             </div>
                             <div class="input-group mb-3">
-                                <span class="input-group-text orange">
+                                <span class="input-group-text deepColor">
                                     <i class="bi bi-lock-fill text-white"></i>
                                 </span>
                                 <input id="rawPassword" name="password" type="password" class="form-control" placeholder="Password"/>
@@ -54,7 +54,7 @@
                                 </p>
                             </div>
                             <div class="text-center">
-                                <button class="btn orange mt-2" type="submit">
+                                <button class="btn deepColor mt-2" type="submit">
                                     Log In
                                 </button>
                             </div>

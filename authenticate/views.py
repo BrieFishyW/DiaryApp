@@ -38,7 +38,6 @@ def loginview(request):
     context = {
         "message": message,
         "form": form,
-        "loggedIn": request.user.is_authenticated,
     }
     return render(request, 'login.html', context)
 

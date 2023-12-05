@@ -1,20 +1,26 @@
 body {
-    background-color: #fffdeb;
+    background-color: azure;
 }
 label {
     font-size: 12px;
 }
 #navbar {
     padding: 10px 30px;
-    background-color: #deb357;
+    background-color: dodgerblue;
     border-bottom: solid lightgray 1px;
 }
 .nav-item{
     padding: 5px;
 }
-.orange {
-    background-color: #deb357;
+#bodydiv {
+    margin: 50px;
 }
-h3 {
-    color: #deb357;
+#entryListItem{
+    padding: 5px;
+    margin: 5px;
+    overflow: auto;
+    background: whitesmoke;
+}
+.deepColor {
+    background-color: royalblue;
 }
