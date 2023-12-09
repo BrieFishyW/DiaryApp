@@ -7,27 +7,16 @@
 {% block body %}
     <h1>Entries</h1>
     <form action="" method="GET">
-        <!-- Start of Add Button -->
         <div class="d-flex flex-row">
             <!-- Start Of Search Bar -->
             <div class="flex-grow-1 me-1">
-                <div class="input-group">
-                    <div class="input-group-text bg-primary">
-                  <span class="text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         class="bi bi-search" viewBox="0 0 16 16">
-                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                    </svg>
-                  </span>
-                    </div>
-                    <input type="search" name="entry_title" class="form-control">
-                </div>
+                <input type="search" name="entry_title" class="form-control">
             </div>
             <input type="submit" class="btn btn-primary" value="Search">
             <!-- End of Search Bar -->
             <div class="p-2 flex-fill"></div>
             <div class="ms-auto">
-                <a href="{% url 'index' %}" class="btn btn-primary">New</a>
+                <a href="{% url 'new' %}" class="btn btn-primary">New</a>
             </div>
         </div>
         <!-- End of Add Button -->

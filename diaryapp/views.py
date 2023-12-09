@@ -1,5 +1,7 @@
 from django.core.paginator import Paginator
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
+from .forms import EntryForm
 from .models import Entry
 
 
@@ -13,4 +15,20 @@ def listpage (request):
     page = request.GET.get('page')
     entry_list = paginator.get_page(page)
     return render(request, 'listpage.html', {'entry_list': entry_list})
+
+def newEntry (request):
+    # If we are saving a new entry, add it to the database
+    if request.method == "POST":
+        form = EntryForm(request.POST)
+        if form.is_valid():
+            # save to the database
+            form.save()
+        else:
+            print(form.errors)
+        # TODO: redirect to view entry page
+        return redirect('diary')
+    else:
+        # Otherwise show the form
+        # Get default values
+        return render(request, 'editpage.html', {'form': EntryForm()})
 

@@ -25,3 +25,6 @@ label {
 .deepColor {
     background-color: royalblue;
 }
+input {
+    margin: 5px;
+}
