@@ -16,10 +16,11 @@ label {
     margin: 50px;
 }
 #entryListItem{
-    padding: 5px;
-    margin: 5px;
+    padding: 15px;
+    margin: 10px;
     overflow: auto;
     background: whitesmoke;
+    border-radius: 20px;
 }
 .deepColor {
     background-color: royalblue;
