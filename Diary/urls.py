@@ -32,4 +32,6 @@ urlpatterns = [
     # diary urls
     path('diary/', diaryViews.listpage, name="diary"),
     path('new/', diaryViews.newEntry, name="new"),
+    path('edit/<int:entry_id>', diaryViews.editEntry, name="edit"),
+    path('display/<int:entry_id>', diaryViews.viewEntry, name="view_entry"),
 ]

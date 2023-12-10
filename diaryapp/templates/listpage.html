@@ -22,12 +22,14 @@
         <!-- End of Add Button -->
     </form>
     {% for entry in entry_list %}
-        <div id="entryListItem" class="border w-100">
-            <div class="float-start"><h3>{{ entry.entry_title }}</h3></div>
-            <div class="float-end"><h5>{{ entry.entry_date }}</h5></div>
-            <br><br>
-            <div class="w-100 float-none"><p class="description">{{ entry.entry_content|truncatewords:50 }}</p></div>
-        </div>
+        <a href="{% url 'view_entry' entry.id %}" class="no-format">
+            <div id="entryListItem" class="border w-100">
+                <div class="float-start"><h3>{{ entry.entry_title }}</h3></div>
+                <div class="float-end"><h5>{{ entry.entry_date }}</h5></div>
+                <br><br>
+                <div class="w-100 float-none"><p class="description">{{ entry.entry_content|truncatewords:50 }}</p></div>
+            </div>
+        </a>
     {% endfor %}
 
     {% if entry_list.has_previous %}

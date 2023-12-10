@@ -2,17 +2,17 @@
 
 
 {% block entry_title %}
-    {{ form.entry_title }}
+    <H3>{{ entry.entry_title }}</H3>
 {% endblock %}
 
 {% block entry_date %}
-    {{ form.entry_date }}
+    <H5>{{ entry.entry_date }}</H5>
 {% endblock %}
 
 {% block entry_content %}
-    {{ form.entry_content }}
+    <p>{{ entry.entry_content }}</p>
 {% endblock %}
 
 {% block entry_button %}
-    <input type="submit" class="btn btn-primary" value="Save">
+    <a href="{% url 'edit' entry.id %}" class="btn btn-primary">Edit</a>
 {% endblock %}

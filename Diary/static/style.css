@@ -28,3 +28,7 @@ label {
 input {
     margin: 5px;
 }
+a.no-format {
+  text-decoration: inherit;
+  color: inherit;
+}
